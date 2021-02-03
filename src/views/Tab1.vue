@@ -2,27 +2,55 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title>Color</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
+          <ion-title size="large">Color</ion-title>
         </ion-toolbar>
       </ion-header>
-    
-      <ExploreContainer name="Tab 1 page" />
+
+      <!--Change color of a text from a button-->
+      <div id="app-42">
+        <p id="color">Rainbow</p>
+        <button id="button" v-on:click="changeColor">Change color</button>
+      </div>
+
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
+<style>
+#app-42 {
+  text-align: center;
+  font-size: 3em;
+}
+
+#app-42 button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+
+<script lang="js">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  {
   name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
+  el: '#app-42',
+  methods: {
+    changeColor: function () {
+      document.getElementById("color").style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+  }
 }
 </script>
