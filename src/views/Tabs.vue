@@ -8,12 +8,12 @@
         </ion-tab-button>
           
         <ion-tab-button tab="photo" href="/jon/photo">
-          <ion-icon :icon="ellipse" />
+          <ion-icon :icon="camera" />
           <ion-label>Photo</ion-label>
         </ion-tab-button>
         
         <ion-tab-button tab="counter" href="/jon/counter">
-          <ion-icon :icon="square" />
+          <ion-icon :icon="timer" />
           <ion-label>Counter</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
@@ -23,15 +23,15 @@
 
 <script lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage } from '@ionic/vue';
-import { ellipse, square, colorPalette } from 'ionicons/icons';
+import { timer, camera, colorPalette } from 'ionicons/icons';
 
 export default {
   name: 'Tabs',
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
   setup() {
     return {
-      ellipse, 
-      square,
+      timer,
+      camera,
       colorPalette,
     }
   }
