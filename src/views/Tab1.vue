@@ -29,7 +29,7 @@
 }
 
 #app-42 button {
-  background-color: #4CAF50; /* Green */
+  background-color: #F7931E; /* Orange */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -44,7 +44,7 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 
 export default  {
-  name: 'Tab1',
+  name: 'Color',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
   el: '#app-42',
   methods: {
